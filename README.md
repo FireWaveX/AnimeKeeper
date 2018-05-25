@@ -15,7 +15,7 @@ This is a list of all the functions that have been developped:
 - The user can fill in a form to add a new anime in the database.
 - If the user press the return button on his phone on the main page, the app will need a confirmation so the user can logout.
 
-# future content
+# Future content
 
 This app will be developed furter and this is the list of functions I will try to add :
 - Upgrade the login screen so that a new user can create a new account with his name, username, password, email
@@ -25,6 +25,6 @@ This app will be developed furter and this is the list of functions I will try t
 - add a "news" section, admin and mods can add some news (link to tweets, facebook posts, links, images, ...)
 
 
-# fair use
+# Fair use
 
 "Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use."
