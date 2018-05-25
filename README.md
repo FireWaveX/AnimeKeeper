@@ -23,3 +23,8 @@ This app will be developed furter and this is the list of functions I will try t
 - create a new type of user : the mods. They will have the right to delete or update some animes / manga.
 - add a reputation system, if a user has been on the app for some time and has good level of reputation, he will be upgraded to the mod status
 - add a "news" section, admin and mods can add some news (link to tweets, facebook posts, links, images, ...)
+
+
+# fair use
+
+"Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use."
