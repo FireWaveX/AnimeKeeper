@@ -34,6 +34,7 @@ This app will be developed furter and this is the list of functions I will try t
 - create a new type of user : the mods. They will have the right to delete or update some animes / manga.
 - add a reputation system, if a user has been on the app for some time and has good level of reputation, he will be upgraded to the mod status
 - add a "news" section, admin and mods can add some news (link to tweets, facebook posts, links, images, ...)
+- add some design to the anime list (that's gonna take some time to make it perfect ^^ )
 
 
 # Fair use
