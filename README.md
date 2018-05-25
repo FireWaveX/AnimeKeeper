@@ -5,6 +5,14 @@ Author : Ledeme Alexandre
 
 This app allows an user to keep track of his anime. He can add an anime to the database and view a list of all the animes added by users.
 
+## sidenote
+
+You can use these to login :
+- username : "test"
+- password : "" (nothing)
+
+If you modify the username and / or the password, please put it back to the original when finished.
+
 # Anime Keeper is at V1.0
 
 ## This is a list of all the functions that have been developped:
@@ -15,7 +23,7 @@ This app allows an user to keep track of his anime. He can add an anime to the d
 - The user can fill in a form to add a new anime in the database.
 - If the user press the return button on his phone on the main page, the app will need a confirmation so the user can logout.
 
-## bugs:
+## known bugs:
 - some landscape view ruins the UX and the design
 
 # Future content
