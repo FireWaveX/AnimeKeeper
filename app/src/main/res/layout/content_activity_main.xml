@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test1_res"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.ledeme.animekeeper.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <org.ledeme.animekeeper.FontText
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDark"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_text"
+        android:textSize="30sp"
+        app:typefaceAsset="fonts/BebasNeue_Bold.ttf"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30sp"
+        android:text="@string/button_text"
+        android:id="@+id/start_button"
+        android:background="@color/colorWhite"
+        android:width="120sp"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/chnginfo"
+    tools:context=".UserAccountActivity"
+    tools:showIn="@layout/activity_user_account">
+
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_name_input"
+        android:layout_alignParentStart="true"
+        android:height="30dp"
+        android:text="@string/user_name"
+        android:textSize="15sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:width="200dp"
+        android:height="40dp"
+        android:inputType="text"
+        android:hint="@string/user_name_input"
+        android:id="@+id/user_name_input"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/user_mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_mdp_input"
+        android:layout_alignParentStart="true"
+        android:height="30dp"
+        android:text="@string/user_mdp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/user_mdp_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_name_input"
+        android:layout_below="@+id/user_name_input"
+        android:width="200dp"
+        android:height="40dp"
+        android:hint="@string/user_mdp_input"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/user_mdp_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_mdp_input_confirm"
+        android:layout_alignParentStart="true"
+        android:height="30dp"
+        android:text="@string/user_mdp_confirm"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/user_mdp_input_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_name_input"
+        android:layout_below="@+id/user_mdp"
+        android:width="200dp"
+        android:height="40dp"
+        android:hint="@string/user_mdp_input_confirm"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/update_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="164dp"
+        android:width="200dp"
+        android:text="@string/update_user" />
+
+
+</RelativeLayout>

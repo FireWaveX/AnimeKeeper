@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LogginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <EditText
+        android:id = "@+id/input_loggin"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="200sp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/login"
+        android:width="200sp"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        />
+
+    <EditText
+        android:id = "@+id/input_mdp"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/input_loggin"
+        android:layout_centerHorizontal="true"
+        android:inputType = "textPassword"
+        android:hint="@string/mdp"
+        android:width="200sp"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/boutton_login"
+        android:layout_below="@id/input_mdp"
+        android:layout_marginTop="15sp"
+        android:background="@color/colorWhite"
+        android:id="@+id/boutton_login"
+        />
+
+    <ImageView
+        android:layout_width="139dp"
+        android:layout_height="164dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/boutton_login"
+        android:src="@drawable/logimage" />
+
+</RelativeLayout>

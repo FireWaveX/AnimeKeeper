@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- title of app -->
+    <string name="app_name">Anime Keeper</string>
+
+    <!-- text of toasts -->
+    <string name="start_toast">C\'est parti</string>
+    <string name="failed_login">Erreur lors de l\'authentification</string>
+
+    <!--text des TextViews -->
+    <string name="textView1">Bienvenue </string>
+    <string name="goToAnimeList">voir tous les animes</string>
+    <string name="rv_anime_list_name">Nom : </string>
+    <string name="rv_anime_list_genres">Genres :</string>
+
+    <!--text des Boutons -->
+    <string name="button_text">Start</string>
+    <string name="boutton_login">Confirmer</string>
+    <string name="rv_button_add_anime">Ajouter un anime</string>
+
+    <!--text des menus -->
+    <string name="action_settings">Paramètres</string>
+    <string name="action_user">Compte</string>
+
+    <!--text des inputs -->
+    <string name="login">Login</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="add_anime_name">Nom de l\'anime :</string>
+    <string name="add_anime_name_input">Nom</string>
+    <string name="add_anime_genres">Genres :</string>
+    <string name="add_anime_genre_input">Genres</string>
+    <string name="add_anime_season">Saison # :</string>
+    <string name="add_anime_season_input">Saison</string>
+    <string name="add_anime_episodes">Nb épisodes : </string>
+    <string name="add_anime_season_episodes">Episodes</string>
+    <string name="add_anime">Ajouter anime</string>
+    <string name="action_find_manga_store">Trouver magasin</string>
+    <string name="user_name">Pseudo :</string>
+    <string name="user_name_input">Pseudo</string>
+    <string name="user_mdp">Mot de passe  :</string>
+    <string name="user_mdp_input">Mot de passe</string>
+    <string name="update_user">Mise a jour des infos</string>
+    <string name="user_mdp_confirm">Confirmer mdp :</string>
+    <string name="user_mdp_input_confirm">Mot de passe</string>
+    <string name="user_mdp_error">Error</string>
+    <string name="user_mdp_error_msg">Please check that you input the same password twice</string>
+    <string name="welcome_text">Bienvenu dans Anime Keeper</string>
+    <string name="exit_msg">Appuyez sur oui pour se déconecter</string>
+    <string name="yes">oui</string>
+    <string name="no">non</string>
+    <string name="GoodBye">Au revoir?</string>
+    <string name="title_notif">Modification des données</string>
+    <string name="msg_notif">Les données de votre profil ont été mis a jour, veuillez vous connecter avec les nouvelles informations</string>
+
+
+</resources>
