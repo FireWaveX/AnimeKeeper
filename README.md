@@ -22,7 +22,7 @@ If you modify the username and / or the password, please put it back to the orig
 - A list of all the anime in the database is displayed in a RecyclerView that update itself if a new anime has been inserted in the database.
 - The user can fill in a form to add a new anime in the database.
 - If the user press the return button on his phone on the main page, the app will need a confirmation so the user can logout.
-- note : all query is done with POST / GET requests. I use oracle apex to manage a REST API
+- note : all query are done with POST / GET requests. I use oracle apex to manage a REST API
 
 ## known bugs:
 - some landscape view ruins the UX and the design
