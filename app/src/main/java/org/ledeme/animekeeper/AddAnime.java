@@ -1,7 +1,9 @@
 package org.ledeme.animekeeper;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
@@ -44,7 +46,7 @@ public class AddAnime extends AppCompatActivity {
     public String season;
     public String nb_episodes;
     public Button btnAddAnime;
-
+    Intent listOfAnime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class AddAnime extends AppCompatActivity {
         setContentView(R.layout.activity_add_anime);
 
         //Set other intents/activity
-        final Intent listOfAnime = new Intent(this, ListOfAnime.class);
+        listOfAnime = new Intent(this, ListOfAnime.class);
 
         final EditText Ename = (EditText)findViewById(R.id.add_anime_name_input);
         final EditText Egenre = (EditText)findViewById(R.id.add_anime_genres_input);
@@ -124,4 +126,12 @@ public class AddAnime extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+
+        startActivity(listOfAnime);
+
+    }
+
 }
