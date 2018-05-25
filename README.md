@@ -9,7 +9,7 @@ This app allows an user to keep track of his anime. He can add an anime to the d
 
 You can use these to login :
 - username : "test"
-- password : "" (nothing)
+- password : " " (a space)
 
 If you modify the username and / or the password, please put it back to the original when finished.
 
