@@ -5,7 +5,7 @@ Author : Ledeme Alexandre
 
 This app allows an user to keep track of his anime. He can add an anime to the database and view a list of all the animes added by users.
 
-## sidenote
+## Sidenote
 
 You can use these to login :
 - username : "test"
