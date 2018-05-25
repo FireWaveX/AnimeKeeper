@@ -35,7 +35,7 @@
     <string name="add_anime_episodes">Nb épisodes : </string>
     <string name="add_anime_season_episodes">Episodes</string>
     <string name="add_anime">Ajouter anime</string>
-    <string name="action_find_manga_store">Trouver magasin</string>
+    <string name="action_launch_crunchy">Crunchyroll</string>
     <string name="user_name">Pseudo :</string>
     <string name="user_name_input">Pseudo</string>
     <string name="user_mdp">Mot de passe  :</string>

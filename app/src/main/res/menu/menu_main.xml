@@ -6,7 +6,7 @@
     <item
         android:id="@+id/action_find_manga_store"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/action_find_manga_store"
+        android:title="@string/action_launch_crunchy"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_user"
