@@ -1,5 +1,5 @@
 # ©AnimeKeeper 
-This is a android studio school project
+This is an android studio school project
 
 Author : Ledeme Alexandre
 
