@@ -17,6 +17,7 @@
         <EditText
             android:id = "@+id/input_loggin"
             android:text="@{LoginVM.username}"
+            android:afterTextChanged="@{(edtitable)->LoginVM.afterUserNameChange(edtitable)}"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="200sp"
@@ -33,6 +34,7 @@
         <EditText
             android:id = "@+id/input_mdp"
             android:text="@{LoginVM.passwd}"
+            android:afterTextChanged="@{(edtitable)->LoginVM.afterPassWordhange(edtitable)}"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_below="@id/input_loggin"

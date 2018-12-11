@@ -13,30 +13,47 @@ import org.json.JSONObject;
 
 public class LogginMV {
 
-    private ObservableField<String> username = new ObservableField<>();
-    private ObservableField<String> passwd = new ObservableField<>();
+    private ObservableField<String> username = new ObservableField<>("");
+    private ObservableField<String> passwd = new ObservableField<>("");
+
+    private String usrNm;
+    private String mdp;
 
     public String getUsername(){
         return username.get();
+    }
+    public void setUsername(ObservableField<String> username) {
+        this.username = username;
+        this.username.notifyChange();
     }
 
     public String getPasswd(){
         return passwd.get();
     }
-
-    LogginMV(){
-
-
+    public void setPasswd(ObservableField<String> passwd) {
+        this.passwd = passwd;
     }
+
+    LogginMV(){}
 
     public void onClick(){
 
-        Log.i("tag", "U"+username.get());
-        Log.i("tag", "M"+passwd.get());
+        LogginActivity.MVVM_click(this.usrNm, this.mdp);
 
+    }
 
-        LogginActivity.MVVM_click(username.get(), passwd.get());
+    public void afterUserNameChange(CharSequence s)
+    {
+        //Log.i("truc", s.toString());
+        //username.setName(s.toString());
+        this.usrNm = s.toString();
+    }
 
+    public void afterPassWordhange(CharSequence s)
+    {
+        //Log.i("truc", s.toString());
+        //username.setName(s.toString());
+        this.mdp = s.toString();
     }
 
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Anime Keeper.iml" filepath="$PROJECT_DIR$/Anime Keeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/AnimeKeeper.iml" filepath="$PROJECT_DIR$/AnimeKeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

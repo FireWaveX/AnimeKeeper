@@ -67,7 +67,6 @@ public class LogginActivity extends AppCompatActivity {
         final EditText Lusername = (EditText) findViewById(R.id.input_loggin);
         Lusername.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
 
-
         /* Get data from json */
         new JsonTask().execute("https://apex.oracle.com/pls/apex/anime_keeper/ak/getusers");
 
