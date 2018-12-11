@@ -1,7 +1,10 @@
 package org.ledeme.animekeeper;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
+import android.databinding.ObservableField;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.ledeme.animekeeper.databinding.ContentActivityLoginBinding;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,69 +38,75 @@ public class LogginActivity extends AppCompatActivity {
     public static String USER_ID;
 
     Button btnHit;
-    JSONArray txtJson;
+    static JSONArray txtJson;
     ProgressDialog pd;
 
     EditText login_txt;
     EditText mdp_txt;
 
-    Boolean loginSucessful;
+    private static Context mContext;
+
+    public ObservableField<String> login_txt_mvvm = new ObservableField<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
-        //Set other intents/activity
-        final Intent MainPage = new Intent(this, MainPage.class);
+        LogginMV logginMV= new LogginMV();
+
+        //ContentActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.content_activity_login);
+
+        ((ContentActivityLoginBinding) DataBindingUtil.setContentView(this, R.layout.content_activity_login))
+                .setLoginVM(logginMV);
+
+        //setContentView(R.layout.activity_login);
+
+        mContext = this;
 
         final EditText Lusername = (EditText) findViewById(R.id.input_loggin);
         Lusername.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
-
-        btnHit = findViewById(R.id.boutton_login);
-
 
 
         /* Get data from json */
         new JsonTask().execute("https://apex.oracle.com/pls/apex/anime_keeper/ak/getusers");
 
-        btnHit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                login_txt = (EditText)findViewById(R.id.input_loggin);
-                mdp_txt = (EditText)findViewById(R.id.input_mdp);
-
-                String login = login_txt.getText().toString();
-                String mdp = MD5(mdp_txt.getText().toString());
-
-
-                JSONObject checkObj = null;
-                loginSucessful = false;
-                for (int itemIndex=0, totalObject = txtJson.length(); itemIndex < totalObject; itemIndex++) {
-
-                    try {
-                        checkObj = txtJson.getJSONObject(itemIndex);
-
-                        if (checkObj.getString("loggin").equals(login) && checkObj.getString("passwd").equals(mdp)){ //
-
-                            loginSucessful = true;
-                            USER_USERNAME = login;
-                            USER_ID = checkObj.getString("id");
-                            startActivity(MainPage);
-                            break;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (!loginSucessful){
-                    failToLoginToast();
-                }
-            }
-        });
     }
+
+    public static void MVVM_click(String loginMV,String mdpMV){
+
+        //String login = login_txt.getText().toString();
+        String login = loginMV;
+        String mdp = MD5(mdpMV);
+
+        JSONObject checkObj = null;
+        Boolean loginSucessful = false;
+        for (int itemIndex=0, totalObject = txtJson.length(); itemIndex < totalObject; itemIndex++) {
+
+            try {
+                checkObj = txtJson.getJSONObject(itemIndex);
+
+                if (checkObj.getString("loggin").equals(login) && checkObj.getString("passwd").equals(mdp)){ //
+
+                    loginSucessful = true;
+                    USER_USERNAME = login;
+                    USER_ID = checkObj.getString("id");
+                    //Set other intents/activity
+                    final Intent MainPage = new Intent(mContext, MainPage.class);
+                    mContext.startActivity(MainPage);
+                    break;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        if (!loginSucessful){
+            //failToLoginToast();
+        }
+
+    }
+
 
     public static String MD5(String md5) {
         try {
@@ -120,7 +130,7 @@ public class LogginActivity extends AppCompatActivity {
 
     // ---------------------------------------------------------------------------------------------
 
-    private class JsonTask extends AsyncTask<String, String, String> {
+    public class JsonTask extends AsyncTask<String, String, String> {
 
         protected void onPreExecute() {
             super.onPreExecute();
