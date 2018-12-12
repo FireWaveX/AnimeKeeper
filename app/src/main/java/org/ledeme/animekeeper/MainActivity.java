@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,8 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.ledeme.animekeeper.databinding.ContentActivityMainBinding;
+import org.ledeme.animekeeper.databinding.HomepageBinding;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -41,17 +44,24 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     //var globales
+    private static Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+
+        MainMV mainMV = new MainMV();
+        ((ContentActivityMainBinding) DataBindingUtil.setContentView(this, R.layout.content_activity_main))
+                .setLoginVM(mainMV);
 
         //Set other intents/activity
-        final Intent LogginPage = new Intent(this, LogginActivity.class);
+        //final Intent LogginPage = new Intent(this, LogginActivity.class);
 
+        mContext = this;
 
+        /*
         Button start = findViewById(R.id.start_button);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        */
+    }
+
+    public static void MVVM_click(){
+
+        final Intent LogginPage = new Intent(mContext, LogginActivity.class);
+        mContext.startActivity(LogginPage);
 
     }
 

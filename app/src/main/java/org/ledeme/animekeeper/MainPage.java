@@ -48,7 +48,7 @@ public class MainPage extends AppCompatActivity{
         //setContentView(R.layout.homepage);
 
         //Set other intents/activity
-        final Intent listAnime = new Intent(this, ListOfAnime.class);
+        //final Intent listAnime = new Intent(this, ListOfAnime.class);
         mainAct = new Intent(this, MainActivity.class);
 
         btnAnimeList = findViewById(R.id.btnGoToAnimeList);
