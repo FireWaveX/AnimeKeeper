@@ -1,8 +1,10 @@
 package org.ledeme.animekeeper;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,6 +18,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.ledeme.animekeeper.databinding.ContentActivityLoginBinding;
+import org.ledeme.animekeeper.databinding.HomepageBinding;
+
 /**
  * Main page for the app
  */
@@ -25,11 +32,20 @@ public class MainPage extends AppCompatActivity{
     Button btnAnimeList;
     Intent mainAct;
 
+    private static Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homepage);
+
+        MainPageMV mainPageMV = new MainPageMV();
+
+        ((HomepageBinding) DataBindingUtil.setContentView(this, R.layout.homepage))
+                .setLoginVM(mainPageMV);
+
+
+        //setContentView(R.layout.homepage);
 
         //Set other intents/activity
         final Intent listAnime = new Intent(this, ListOfAnime.class);
@@ -37,9 +53,13 @@ public class MainPage extends AppCompatActivity{
 
         btnAnimeList = findViewById(R.id.btnGoToAnimeList);
 
+        mContext = this;
+
+        /*
         TextView msgWelcome =  findViewById(R.id.headerTextMainPage);
         String msg = getString(R.string.textView1);
         msgWelcome.setText(msg +" "+ LogginActivity.USER_USERNAME);
+
 
         btnAnimeList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +69,15 @@ public class MainPage extends AppCompatActivity{
 
             }
         });
+        */
+    }
+
+
+    public static void MVVM_click(){
+
+        final Intent listAnime = new Intent(mContext, ListOfAnime.class);
+        mContext.startActivity(listAnime);
+
     }
 
     @Override

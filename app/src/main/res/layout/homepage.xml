@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="org.ledeme.animekeeper.MainPage"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@drawable/mainbkg">
 
-    <org.ledeme.animekeeper.FontText
-        android:id="@+id/headerTextMainPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/textView1"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        app:typefaceAsset="fonts/BebasNeue_Bold.ttf"
-        />
+<layout>
+    <data>
+        <variable
+            name="LoginVM"
+            type="org.ledeme.animekeeper.MainPageMV"/>
+    </data>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/headerTextMainPage"
-        android:layout_centerHorizontal="true"
-        android:text="@string/goToAnimeList"
-        android:id="@+id/btnGoToAnimeList"
-        />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="org.ledeme.animekeeper.MainPage"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@drawable/mainbkg">
 
-</RelativeLayout>
+        <org.ledeme.animekeeper.FontText
+            android:id="@+id/headerTextMainPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@{LoginVM.username}"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            app:typefaceAsset="fonts/BebasNeue_Bold.ttf"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerTextMainPage"
+            android:layout_centerHorizontal="true"
+            android:text="@string/goToAnimeList"
+            android:id="@+id/btnGoToAnimeList"
+            android:onClick="@{() -> LoginVM.onClick()}"
+            />
+
+    </RelativeLayout>
+
+</layout>

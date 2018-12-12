@@ -76,7 +76,6 @@ public class LogginActivity extends AppCompatActivity {
     public static void MVVM_click(String loginMV,String mdpMV){
 
         //String login = login_txt.getText().toString();
-        String login = loginMV;
         String mdp = MD5(mdpMV);
 
         JSONObject checkObj = null;
@@ -86,10 +85,10 @@ public class LogginActivity extends AppCompatActivity {
             try {
                 checkObj = txtJson.getJSONObject(itemIndex);
 
-                if (checkObj.getString("loggin").equals(login) && checkObj.getString("passwd").equals(mdp)){ //
+                if (checkObj.getString("loggin").equals(loginMV) && checkObj.getString("passwd").equals(mdp)){ //
 
                     loginSucessful = true;
-                    USER_USERNAME = login;
+                    USER_USERNAME = loginMV;
                     USER_ID = checkObj.getString("id");
                     //Set other intents/activity
                     final Intent MainPage = new Intent(mContext, MainPage.class);
