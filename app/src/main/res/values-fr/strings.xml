@@ -50,8 +50,12 @@
     <string name="yes">oui</string>
     <string name="no">non</string>
     <string name="GoodBye">Au revoir?</string>
+    <string name="channel_name">Chaine anime</string>
+    <string name="channel_description">Chaine  principale</string>
     <string name="title_notif">Modification des données</string>
     <string name="msg_notif">Les données de votre profil ont été mis a jour, veuillez vous connecter avec les nouvelles informations</string>
+    <string name="Delete_Anime">Suprimer anime</string>
+    <string name="Delete_Anime_msg">Êtes-vous sûr de vouloir suprimer cet anime?</string>
 
 
 </resources>
