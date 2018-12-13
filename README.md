@@ -1,7 +1,7 @@
 # ©AnimeKeeper 
 This is an android studio school project
 
-Author : Ledeme Alexandre
+Author : Ledeme Alexandre et Martinot Thibaut
 
 This app allows an user to keep track of his anime. He can add an anime to the database and view a list of all the animes added by users.
 
@@ -26,6 +26,7 @@ If you modify the username and / or the password, please put it back to the orig
 
 ## known bugs:
 - some landscape view ruins the UX and the design
+- if you don't write anything in the password field on loggin, the app will crash when you will press the login button (it will not if you write something, delete it then click the login button)
 
 # Future content
 
