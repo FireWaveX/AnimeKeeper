@@ -50,8 +50,12 @@
     <string name="yes">yes</string>
     <string name="no">no</string>
     <string name="GoodBye">GoodBye?</string>
+    <string name="channel_name">anime channel</string>
+    <string name="channel_description">main channel</string>
     <string name="title_notif">Data update</string>
     <string name="msg_notif">Your profile information has been updated, please login with the new information</string>
+    <string name="Delete_Anime">Delete anime</string>
+    <string name="Delete_Anime_msg">Are you sure you want to delete this anime?</string>
 
 
 </resources>
