@@ -16,8 +16,8 @@ If you modify the username and / or the password, please put it back to the orig
 # Anime Keeper is at V1.0.1
 
 ## This is a list of all the functions that have been added:
--On the page with all the animes, you can delete an animeby pressing it a long time (1 second). A popup will ask the user forits confirmation.
--A new test branch has been developed, instead of MVC pattern, I used MVVM to see if it is more efficient or not.
+- On the page with all the animes, you can delete an animeby pressing it a long time (1 second). A popup will ask the user forits confirmation.
+- A new test branch has been developed, instead of MVC pattern, I used MVVM to see if it is more efficient or not.
 
 # Anime Keeper is at V1.0.0
 
