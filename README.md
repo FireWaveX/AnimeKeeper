@@ -13,13 +13,13 @@ You can use these to login :
 
 If you modify the username and / or the password, please put it back to the original when finished.
 
-# Anime Keeper is at V1.0.1
+# Anime Keeper is at V0.0.2
 
 ## This is a list of all the functions that have been added:
 - On the page with all the animes, you can delete an anime by pressing it a long time (1 second). A popup will ask the user for its confirmation.
 - A new test branch has been developed, instead of MVC pattern, I used MVVM to see if it is more efficient or not.
 
-# Anime Keeper is at V1.0.0
+# Anime Keeper is at V0.0.1
 
 ## This is a list of all the functions that have been developped:
 - login page, the user has to input an username and a password
