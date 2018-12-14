@@ -1,7 +1,7 @@
 # ©AnimeKeeper 
 This is an android studio school project
 
-Author : Ledeme Alexandre et Martinot Thibaut
+Author : Ledeme Alexandre and Martinot Thibaut
 
 This app allows an user to keep track of his anime. He can add an anime to the database and view a list of all the animes added by users.
 
